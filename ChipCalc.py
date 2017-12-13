@@ -1,3 +1,4 @@
+# program to calculate DOC and WOC numbers
 import math
 
 def WOCcalc():
@@ -59,4 +60,25 @@ def DOCcalc():
     print('Adjusted RPM: ' + str(AdjRPM))
     print('Adjusted Feed Rate: ' + str(AdjFeedRate))
     print('MRR: ' + str(MRRd))
-    
+
+# control flow
+def ChipCalc():
+    DOCchoice = (input("DOC Calculator? Y / N: "))
+    if DOCchoice == ('Y' or 'y'):
+        DOCcalc()
+    elif (DOCchoice != 'Y' or 'y'):
+        print('Running WOC Calculator instead')
+        WOCcalc()
+
+
+ChipCalc()
+
+# used PyInstall to create a .exe version
+# Process:
+# Go to terminal and working directory of ChipCalc
+# Type: Pyinstaller 'ChipCalc.py' -F
+# This creates the .exe in the working directory 
+
+
+
+  
